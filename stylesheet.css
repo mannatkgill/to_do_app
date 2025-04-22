@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+
+body, html{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), #9cb2d9);
+}
+
+#title{
+    color: #00246B;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 4em;
+}
+
+#inputBar{
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.class1{
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    padding: 100px 300px 100px;
+    flex-wrap: wrap;
+    gap: 100px;
+    list-style-type: none;
+    font-size: 2em;
+}
+
+input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+  }
