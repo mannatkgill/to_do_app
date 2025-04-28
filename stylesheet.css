@@ -43,6 +43,10 @@ input[type="checkbox"]{
     margin-right: 10px;
 }
 
-input[type="checkbox"]:checked + label {
-    text-decoration: line-through;
-  }
+.toDoBox{
+    text-align: center;
+}
+
+#trashIMG{
+   height: 150px;
+}
