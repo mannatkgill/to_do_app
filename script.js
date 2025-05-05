@@ -1,6 +1,6 @@
 
 if(localStorage.getItem("items") != null){
-    console.log(localStorage.getItem("items")); 
+    //console.log(localStorage.getItem("items")); 
     let list = document.getElementById("list")
     list.innerHTML = localStorage.getItem("items"); 
 }else{
@@ -12,19 +12,24 @@ let counter;
 
 if(localStorage.getItem("counter") != null){
     counter = localStorage.getItem("counter"); 
-    console.log("counter: " + counter); 
+    //console.log("counter: " + counter); 
 
      //add back button functionality 
      //list = document.querySelectorAll("li")
     for(let x = 0 ; x < counter ; x++){
-        console.log(x);
+        //console.log(x);
         let but = document.getElementById("item"+x); 
         if(but == null){
-            console.log("button not found");
+            //console.log("button not found");
         }else{
             but.onclick = function() {
                 updateItemCheck(this, (this.id));
             };
+            let id = "item" + x; 
+            let label = document.querySelector(`label[for="${id}"]`);
+            if(label.style.textDecoration == "line-through"){
+                but.checked = true; 
+            }
         }
     }
  
@@ -36,7 +41,7 @@ else{
 
 document.addEventListener('keydown', function(event){
     if(event.key == "Enter" && document.getElementById("inputBar").value != ""){
-        console.log("counter value: ", counter)
+        //console.log("counter value: ", counter)
         //create li element 
         let item = document.createElement("li"); 
 
@@ -76,13 +81,9 @@ document.addEventListener('keydown', function(event){
 }); 
 
 function updateItemCheck(button, id){
-    console.log("In here"); 
-    console.log("id value: ", id); 
+    //console.log("In here"); 
+    //console.log("id value: ", id); 
     let label = document.querySelector(`label[for="${id}"]`);
-    if(label == null){
-        console.log("is nulll"); 
-    }
-    console.log(label); 
     if(button.checked == true){
         label.style.textDecoration = "line-through";
     }else{
